@@ -1,0 +1,156 @@
+<section id="cv">
+  <div class="container">
+    <h2>
+      <strong> {{ "education.title" | translate }}</strong>
+    </h2>
+    <span class="bar-title mb-5"></span>
+    <div class="row">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <h4>
+          <strong>{{ "education.eductionTitle" | translate }}</strong>
+        </h4>
+        <ul class="timeline">
+          <li>
+            <h5>{{ "education.diplome3" | translate }}</h5>
+            <em class="font-italic"
+              >{{ "education.diplome3Desc" | translate }}<br />
+              {{ "education.diplome3School" | translate }}</em
+            >
+            <p class="year p-2 d-flex justify-content-center">
+              {{ "education.diplome3Year" | translate }}
+            </p>
+          </li>
+          <li>
+            <h5>{{ "education.diplome2" | translate }}</h5>
+            <em class="font-italic"
+              >{{ "education.diplome2Desc" | translate }} <br />
+              {{ "education.diplome2School" | translate }}</em
+            >
+            <p class="year p-2 d-flex justify-content-center">
+              {{ "education.diplome2Year" | translate }}
+            </p>
+          </li>
+          <li>
+            <h5>{{ "education.diplome1" | translate }}</h5>
+            <em class="font-italic">
+              <!-- {{'education.diplome1Desc' | translate}} -->
+              <br />
+              {{ "education.diplome1School" | translate }}</em
+            >
+            <p class="year p-2 d-flex justify-content-center">
+              {{ "education.diplome1Year" | translate }}
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <h4>
+          <strong>{{ "education.experiencesTitle" | translate }}</strong>
+        </h4>
+        <ul class="timeline">
+          <li *ngFor="let experience of experiences">
+            <h5>{{ experience.title }}</h5>
+            <em>{{ experience.company }}</em>
+            <div class="d-flex flex-row">
+              <p class="year p-2 d-flex justify-content-center">
+                {{ experience.period }}
+              </p>
+              <button
+                (click)="detailOnClick(experience)"
+                type="button"
+                class="btn btn-primary"
+              >
+                <span *ngIf="!experience.detailIsDisplayed">+</span
+                ><span *ngIf="experience.detailIsDisplayed">-</span>
+                {{ "education.detail" | translate }}
+              </button>
+            </div>
+            <p *ngIf="experience.detailIsDisplayed">
+              <span
+                *ngFor="let mission of experience.missions; let index = index"
+              >
+                <strong
+                  >{{ "education.mission" | translate }}
+                  {{ index + 1 }}: </strong
+                >{{ mission }} <br />
+              </span>
+              <strong>{{ "education.technologies" | translate }}:</strong>
+              {{ experience.technologies }}
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="col-lg-4 col-md-12 aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="container row">
+          <div
+            class="aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h4>
+              <strong>{{ "education.languages" | translate }}</strong>
+            </h4>
+            <div class="noProgress langue">
+              <span class=""
+                ><img
+                  src="assets/images/united-kingdom-flag.png"
+                  width="20"
+                /><strong> {{ "education.english" | translate }}</strong>
+              </span>
+            </div>
+            <div class="noProgress langue">
+              <span class=""
+                ><img
+                  src="assets/images/france-flag.png"
+                  width="20"
+                /><strong> {{ "education.french" | translate }}</strong>
+              </span>
+            </div>
+            <div class="noProgress langue">
+              <span class=""
+                ><img
+                  src="assets/images/tunisia-flag.jpg"
+                  width="20"
+                /><strong> {{ "education.arabic" | translate }}</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="container row">
+          <div
+            class="mt-3 aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h4>
+              <strong>{{ "education.centerOfInterest" | translate }}</strong>
+            </h4>
+            <div class="noProgress langue">
+              <span>
+                <fa-icon [icon]="sportIcon"></fa-icon
+                ><strong> {{ "education.sport" | translate }}</strong>
+              </span>
+            </div>
+
+            <div class="noProgress langue">
+              <span>
+                <fa-icon [icon]="bookIcon"></fa-icon
+                ><strong> {{ "education.reading" | translate }}</strong>
+              </span>
+            </div>
+            <div class="noProgress langue">
+              <span>
+                <fa-icon [icon]="musicIcon"></fa-icon
+                ><strong> {{ "education.music" | translate }} </strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

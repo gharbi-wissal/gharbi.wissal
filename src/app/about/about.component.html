@@ -1,0 +1,63 @@
+<section id="about">
+  <div class="container">
+    <h2>
+      <strong>{{ "about.title" | translate }}</strong>
+    </h2>
+    <span class="bar-title mb-5"></span>
+    <div class="row">
+      <div class="col-lg-4 col-md-12" data-aos="fade-right">
+        <picture>
+          <img
+            src="assets/images/profile.jpg"
+            alt="photo de profil"
+            class="img-fluid"
+          />
+        </picture>
+        <div class="d-flex justify-content-center">
+          <a
+            class="btn-social-media"
+            href="https://www.linkedin.com/in/wissal-gharbi-090413191/"
+            rel="tooltip"
+            target="_blank"
+            title="{{ 'about.followMeOn' | translate }} Linkedin"
+          >
+            <i class="fa fa-linkedin fa-lg"></i>
+          </a>
+          <!-- <a class="btn-social-media btn-default btn-round btn-lg btn-icon"
+                        href="https://www.linkedin.com/in/wissal-gharbi-090413191" rel="tooltip" target="_blank"
+                        title="{{'about.followMeOn' | translate}} GitHub">
+                        <i class="fa fa-github fa-lg "></i></a> -->
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 pt-4 pt-lg-0" data-aos="fade-left">
+        <h3>{{ "about.jobTitle" | translate }}</h3>
+        <p class="font-italic">
+          {{ "about.whoAmI" | translate }}
+          <br />{{ "about.introOfMe" | translate }} <br />{{
+            "about.myPassion" | translate
+          }}
+        </p>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <ul>
+              <li>
+                <fa-icon [icon]="mapMarker"></fa-icon
+                ><strong> {{ "about.city" | translate }}</strong>
+              </li>
+              <li>
+                <fa-icon [icon]="email"></fa-icon
+                ><strong
+                  ><a href="mailto:gharbi.wissal2@gmail.com">
+                    gharbi.wissal2@gmail.com</a
+                  ></strong
+                >
+              </li>
+              <li><fa-icon [icon]="phone"></fa-icon> (+216) 53 567 937</li>
+              <li><fa-icon [icon]="phone"></fa-icon> (+216) 53 567 937</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
