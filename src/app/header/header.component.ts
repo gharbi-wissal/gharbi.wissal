@@ -8,7 +8,7 @@ import { locale as french } from '../shared/i18n/fr';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   language:any="";

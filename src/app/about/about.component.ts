@@ -7,7 +7,7 @@ import { locale as french } from '../shared/i18n/fr';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
   mapMarker: any;

@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-curriculum-vitae',
   templateUrl: './curriculum-vitae.component.html',
-  styleUrls: ['./curriculum-vitae.component.css']
+  styleUrls: ['./curriculum-vitae.component.scss']
 
 })
 export class CurriculumVitaeComponent implements OnInit {

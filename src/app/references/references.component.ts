@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-references',
   templateUrl: './references.component.html',
-  styleUrls: ['./references.component.css']
+  styleUrls: ['./references.component.scss']
 })
 export class ReferencesComponent implements OnInit {
   references:any=referencesEn;
