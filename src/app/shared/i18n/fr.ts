@@ -74,7 +74,7 @@ export const locale = {
     skills: {
       title: 'Compétences',
       technologies: 'Téchnologies',
-      tools: 'Outils',
+      frameworks: 'Frameworks',
       methodologies: 'Méthodologies',
     },
   },
